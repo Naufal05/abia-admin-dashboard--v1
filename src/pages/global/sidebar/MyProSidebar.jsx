@@ -1,6 +1,5 @@
-// docs https://github.com/azouaoui-med/react-pro-sidebar
 import { useState } from "react";
-import { Menu, Sidebar, MenuItem } from "react-pro-sidebar";
+import { Menu, Sidebar, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useProSidebar } from "react-pro-sidebar";
 
 import { useSidebarContext } from "./sidebarContext";
@@ -10,8 +9,8 @@ import { tokens } from "../../../theme";
 import { useTheme, Box, Typography, IconButton } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+// import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+// import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
@@ -71,11 +70,11 @@ const MyProSidebar = () => {
           backgroundColor: "transparent !important",
         },
         "& .menu-item:hover": {
-          color: `${colors.blueAccent[500]} !important`,
+          color: `${colors.greenAccent[500]} !important`,
           backgroundColor: "transparent !important",
         },
         "& .menu-item.active": {
-          color: `${colors.greenAccent[500]} !important`,
+          color: `${colors.grey[100]} !important`,
           backgroundColor: "transparent !important",
         },
       }}
@@ -83,7 +82,7 @@ const MyProSidebar = () => {
       <Sidebar
         breakPoint="md"
         rtl={sidebarRTL}
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.grey[900]}
         image={sidebarImage}
       >
         <Menu iconshape="square">
@@ -93,11 +92,11 @@ const MyProSidebar = () => {
                 <MenuOutlinedIcon onClick={() => collapseSidebar()} />
               ) : sidebarRTL ? (
                 <SwitchLeftOutlinedIcon
-                  onClick={() => setSidebarRTL(!sidebarRTL)}
+                // onClick={() => setSidebarRTL(!sidebarRTL)}
                 />
               ) : (
                 <SwitchRightOutlinedIcon
-                  onClick={() => setSidebarRTL(!sidebarRTL)}
+                // onClick={() => setSidebarRTL(!sidebarRTL)}
                 />
               )
             }
@@ -132,16 +131,16 @@ const MyProSidebar = () => {
                 alignItems="center"
                 sx={{
                   "& .avater-image": {
-                    backgroundColor: colors.primary[500],
+                    backgroundColor: colors.greenAccent[500],
                   },
                 }}
               >
                 <img
                   className="avater-image"
                   alt="profile user"
-                  width="100px"
-                  height="100px"
-                  src={"../../assets/user.png"}
+                  width="40px"
+                  height="40px"
+                  src={""} //avatar image
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -171,16 +170,25 @@ const MyProSidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 20px 5px 20px" }}
             >
-              Data
+              Default
             </Typography>
+            {/* Menu Items */}
             <Item
-              title="Manage Team"
-              to="/team"
+              title="Notification"
+              to="/notification"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            ></Item>
+            <Item
+              title="Email Content"
+              to="/email"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-            <Item
+
+            {/* <Item
               title="Contacts Information"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
@@ -193,32 +201,32 @@ const MyProSidebar = () => {
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
 
             <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 20px 5px 20px" }}
             >
-              Pages
+              Content
             </Typography>
             <Item
-              title="Profile Form"
+              title="Public Content"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
+              title="Couple Content"
+              to="/form"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="FAQ Page"
-              to="/faq"
+              title="Vontor Content"
+              to="/form"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

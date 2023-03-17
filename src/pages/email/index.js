@@ -3,34 +3,35 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+// import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+// import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+// import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
 
-const Team = () => {
+const Email = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "Id" },
+    { field: "id", headerName: "Id", width: 60 },
     {
-      field: "name",
-      headerName: "Name",
+      field: "mail subject",
+      headerName: "Mail Subject",
       width: 200,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
-      headerName: "Age",
-      type: "number",
+      headerName: "Mail Purpose",
+      // type: "number",
+      width: 400,
       headerAlign: "left",
       align: "left",
     },
-    { field: "phone", headerName: "Phone Number", width: 100 },
-    { field: "email", headerName: "Email", width: 200 },
+    // { field: "phone", headerName: "Phone Number", width: 100 },
+    // { field: "email", headerName: "Email", width: 200 },
     {
       field: "access",
-      headerName: "Access Llvel",
+      headerName: "Actions",
       width: 100,
       renderCell: ({ row: { access } }) => {
         return (
@@ -40,16 +41,16 @@ const Team = () => {
             p="5px"
             display="flex"
             justifyContent="center"
-            backgroundColor={
-              access === "admin"
-                ? colors.greenAccent[600]
-                : colors.greenAccent[800]
-            }
+            // backgroundColor={
+            //   access === "admin"
+            //     ? colors.greenAccent[600]
+            //     : colors.greenAccent[800]
+            // }
             borderRadius="4px"
           >
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
+            {/* {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
             {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
+            {access === "user" && <LockOpenOutlinedIcon />} */}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
               {access}
             </Typography>
@@ -61,7 +62,9 @@ const Team = () => {
   return (
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="TEAM" subtitle="welcome to you Team" />
+        <Header title="Email" subtitle="" />
+        <button variant="contained">Export</button>
+        {/* <button variant="outlined">Outlined</button> */}
       </Box>
       <Box
         m="8px 0 0 0"
@@ -98,4 +101,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Email;

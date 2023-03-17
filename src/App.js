@@ -6,7 +6,7 @@ import { MyProSidebarProvider } from "./pages/global/sidebar/sidebarContext";
 import Topbar from "./pages/global/Topbar";
 
 import Dashboard from "./pages/dashboard";
-import Team from "./pages/team";
+import Notification from "./pages/notification";
 import Invoices from "./pages/invocies";
 import Contacts from "./pages/contacts";
 import Form from "./pages/form";
@@ -16,6 +16,9 @@ import Line from "./pages/line";
 import Pie from "./pages/pie";
 import FAQ from "./pages/faq";
 import Geography from "./pages/geography";
+import Email from "./pages/email/index";
+import PublicContent from "./pages/content/publicContent";
+// import NotificationContent from "./pages/default/notification/NotificationContent";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -29,7 +32,8 @@ const App = () => {
               <Topbar />
               <Routes>
                 <Route path="/" element={<Dashboard />} />
-                <Route path="/team" element={<Team />} />
+                <Route path="/notification" element={<Notification />} />
+                <Route path="/email" element={<Email />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />

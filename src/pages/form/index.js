@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
     <Box m="20px">
-      <Header title="CREATE USER" subtitle="Create a New User Profile" />
+      <Header title="Add  Details" subtitle="" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -62,7 +62,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="First Name"
+                label="Page Title"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.firstName}
@@ -75,7 +75,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Last Name"
+                label="Page Geader Tag"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastName}
@@ -88,33 +88,33 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Email"
+                label="Title"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.email}
                 name="email"
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Contact Number"
+                label="URL"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.contact}
                 name="contact"
                 error={!!touched.contact && !!errors.contact}
                 helperText={touched.contact && errors.contact}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 2" }}
               />
               <TextField
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Address 1"
+                label="Page Content"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.address1}
@@ -127,7 +127,33 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Address 2"
+                label="Meta Title"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.address2}
+                name="address2"
+                error={!!touched.address2 && !!errors.address2}
+                helperText={touched.address2 && errors.address2}
+                sx={{ gridColumn: "span 2" }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Meta Keywords"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.address2}
+                name="address2"
+                error={!!touched.address2 && !!errors.address2}
+                helperText={touched.address2 && errors.address2}
+                sx={{ gridColumn: "span 2" }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Meta Content"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.address2}
@@ -139,13 +165,15 @@ const Form = () => {
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
-                Create New User
+                Add
               </Button>
             </Box>
           </form>
         )}
       </Formik>
     </Box>
+
+    // Table
   );
 };
 

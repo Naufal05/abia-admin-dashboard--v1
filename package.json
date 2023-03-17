@@ -1,5 +1,5 @@
 {
-  "homepage": "http://Nuafal05.github.io/Abia-Admin-dashboard",
+
   "name": "abia",
   "version": "0.1.0",
   "private": true,
@@ -29,13 +29,13 @@
     "react-pro-sidebar": "^1.0.0-alpha.7",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.9",
+    "sweetalert2": "^11.7.3",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

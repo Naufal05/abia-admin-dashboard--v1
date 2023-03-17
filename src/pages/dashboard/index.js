@@ -10,10 +10,10 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
+// import EmailIcon from "@mui/icons-material/Email";
+// import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+// import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -41,8 +41,8 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              backgroundColor: colors.blueAccent[700],
-              color: colors.grey[100],
+              backgroundColor: colors.blueAccent[300],
+              color: colors.greenAccent[700],
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
@@ -65,13 +65,16 @@ const Dashboard = () => {
             justifyContent="center"
           >
             <StatBox
-              title="12,361"
-              subtitle="Emails Sent"
+              title="50"
+              subtitle="Couples Registered"
               progress="0.75"
               increase="+14%"
               icon={
-                <EmailIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                // <EmailIcon
+                //   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                // />
+                <PersonAddIcon
+                  sx={{ color: colors.greenAccent[400], fontSize: "32px" }}
                 />
               }
             />
@@ -86,13 +89,16 @@ const Dashboard = () => {
             justifyContent="center"
           >
             <StatBox
-              title="431,225"
-              subtitle="Sales Obtained"
+              title="120"
+              subtitle="Expressed Interest"
               progress="0.50"
               increase="+21%"
               icon={
-                <PointOfSaleIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                // <PointOfSaleIcon
+                //   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                // />
+                <PersonAddIcon
+                  sx={{ color: colors.greenAccent[400], fontSize: "32px" }}
                 />
               }
             />
@@ -107,13 +113,13 @@ const Dashboard = () => {
             justifyContent="center"
           >
             <StatBox
-              title="32,441"
-              subtitle="New Clients"
+              title="50"
+              subtitle="Future Couples Registered"
               progress="0.30"
               increase="+5%"
               icon={
                 <PersonAddIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: colors.greenAccent[400], fontSize: "32px" }}
                 />
               }
             />
@@ -128,13 +134,13 @@ const Dashboard = () => {
             justifyContent="center"
           >
             <StatBox
-              title="1,325,134"
-              subtitle="Traffic Received"
+              title="30"
+              subtitle="Unverified Enquirys"
               progress="0.80"
               increase="+43%"
               icon={
-                <TrafficIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                <PersonAddIcon
+                  sx={{ color: colors.greenAccent[400], fontSize: "32px" }}
                 />
               }
             />
@@ -178,7 +184,7 @@ const Dashboard = () => {
                 <Box>
                   <IconButton>
                     <DownloadOutlinedIcon
-                      sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                      sx={{ fontSize: "26px", color: colors.greenAccent[300] }}
                     />
                   </IconButton>
                 </Box>
@@ -279,7 +285,7 @@ const Dashboard = () => {
                     <Typography
                       variant="h5"
                       fontWeight="600"
-                      color={colors.greenAccent[100]}
+                      color={colors.greenAccent[500]}
                     >
                       {transaction.txId}
                     </Typography>

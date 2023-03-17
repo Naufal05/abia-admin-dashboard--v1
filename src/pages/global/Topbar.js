@@ -31,7 +31,7 @@ const Topbar = () => {
           display="flex"
           backgroundColor={colors.primary[400]}
           p={0.2}
-          borderRadius={1}
+          borderRadius={3}
         >
           <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Search" />
           <IconButton type="button">
