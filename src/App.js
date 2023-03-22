@@ -17,7 +17,7 @@ import Pie from "./pages/pie";
 import FAQ from "./pages/faq";
 import Geography from "./pages/geography";
 import Email from "./pages/email/index";
-import PublicContent from "./pages/content/publicContent";
+// import PublicContent from "./pages/content/publicContent";
 // import NotificationContent from "./pages/default/notification/NotificationContent";
 
 const App = () => {

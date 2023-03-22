@@ -23,7 +23,7 @@ const Notification = () => {
       field: "age",
       headerName: "Mail Purpose",
       // type: "number",
-      width: 400,
+      width: 300,
       headerAlign: "left",
       align: "left",
     },
@@ -63,7 +63,7 @@ const Notification = () => {
     <Box m="20px">
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="Notification" subtitle="" />
-        <button variant="contained">Export</button>
+        <button className="button muted-button">Export</button>
         {/* <button variant="outlined">Outlined</button> */}
       </Box>
       <Box
