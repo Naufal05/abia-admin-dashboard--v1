@@ -1,5 +1,6 @@
 {
   "name": "abia",
+  "homepage": "https://abia-test.com/abia-admin/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
